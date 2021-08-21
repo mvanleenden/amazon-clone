@@ -3,7 +3,14 @@ module.exports = {
   darkMode: false,
   mode: "jit",
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        amazon_blue: {
+          light: "#232F3E",
+          DEFAULT: "#131921",
+        },
+      },
+    },
   },
   variants: {
     extend: {},
