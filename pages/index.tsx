@@ -1,9 +1,16 @@
 import Head from "next/head";
+import { GetServerSideProps } from "next";
 
 import Header from "../components/Header";
 import Banner from "../components/Banner";
+import ProductFeed from "../components/ProductFeed";
+import { Product } from "../models/product";
 
-export default function Home() {
+type Props = {
+  products: Product[];
+};
+
+export default function Home({ products }: Props) {
   return (
     <div className="bg-gray-100">
       <Head>
@@ -13,7 +20,20 @@ export default function Home() {
       <Header />
       <main className="max-w-7xl mx-auto">
         <Banner />
+        <ProductFeed products={products} />
       </main>
     </div>
   );
 }
+
+export const getServerSideProps = async (context: GetServerSideProps) => {
+  const products = (await fetch("https://fakestoreapi.com/products").then(
+    (res) => res.json()
+  )) as Product[];
+
+  return {
+    props: {
+      products,
+    },
+  };
+};
