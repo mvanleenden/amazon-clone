@@ -22,18 +22,18 @@ const Header = () => {
 
         {/* right */}
         <div
-          className="text-white flex items-center text-xs space-x-6 mx-6
+          className="text-white flex items-center text-xs space-x-3 mx-6
         whitespace-nowrap"
         >
-          <div className="link">
+          <div className="header__link">
             <p>Hello, Mayron</p>
             <p className="font-extrabold md:text-sm">Account & List</p>
           </div>
-          <div className="link">
+          <div className="header__link">
             <p>Returns</p>
             <p className="font-extrabold md:text-sm">& Orders</p>
           </div>
-          <div className="relative link flex items-center">
+          <div className="relative header__link flex items-center">
             <span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 rounded-full text-center text-black font-bold">
               0
             </span>
@@ -45,18 +45,20 @@ const Header = () => {
         </div>
       </div>
       <div className="flex items-center bg-amazon_blue-light text-white text-sm space-x-3 p-2 pl-6">
-        <p className="link flex items-center">
+        <p className="header__link flex items-center">
           <MenuIcon className="h-6 mr-1" /> All
         </p>
-        <p className="link">Prime Video</p>
-        <p className="link">Amazon Business</p>
-        <p className="link">Today&apos;s Deals</p>
-        <p className="link hidden lg:inline-flex">Electronics</p>
-        <p className="link hidden lg:inline-flex">Food & Grocery</p>
-        <p className="link hidden lg:inline-flex">Prime</p>
-        <p className="link hidden lg:inline-flex">Buy Again</p>
-        <p className="link hidden lg:inline-flex">Shopper Toolkit</p>
-        <p className="link hidden lg:inline-flex">Health & Personal Care</p>
+        <p className="header__link">Prime Video</p>
+        <p className="header__link">Amazon Business</p>
+        <p className="header__link">Today&apos;s Deals</p>
+        <p className="header__link hidden lg:inline-flex">Electronics</p>
+        <p className="header__link hidden lg:inline-flex">Food & Grocery</p>
+        <p className="header__link hidden lg:inline-flex">Prime</p>
+        <p className="header__link hidden lg:inline-flex">Buy Again</p>
+        <p className="header__link hidden lg:inline-flex">Shopper Toolkit</p>
+        <p className="header__link hidden lg:inline-flex">
+          Health & Personal Care
+        </p>
       </div>
     </header>
   );

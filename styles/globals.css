@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.header__link {
+  @apply cursor-pointer p-1 border border-transparent hover:border hover:border-white;
+}
+
 .link {
   @apply cursor-pointer hover:underline;
 }
