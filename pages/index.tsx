@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Banner from "../components/Banner";
 import ProductFeed from "../components/ProductFeed";
 import { Product } from "../models/product";
+import Footer from "../components/Footer";
 
 type Props = {
   products: Product[];
@@ -22,6 +23,7 @@ export default function Home({ products }: Props) {
         <Banner />
         <ProductFeed products={products} />
       </main>
+      <Footer />
     </div>
   );
 }
