@@ -2,7 +2,7 @@
 This is a amazon clone created with NextJS, TypeScript & TailwindCSS
 
 You can check the demo here:
-https://google-clone-inky.vercel.app/
+https://amazon-clone-theta-two.vercel.app/
 
 
 ## Getting Started
