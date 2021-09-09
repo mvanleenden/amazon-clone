@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { MenuIcon, ShoppingCartIcon } from "@heroicons/react/outline";
-import { signIn, signOut, useSession } from "next-auth/client";
+import { useSession } from "next-auth/client";
 
 import SearchBar from "./SearchBar";
 
@@ -31,10 +31,7 @@ const Header = () => {
           className="text-white flex items-center text-xs space-x-3 mx-6
         whitespace-nowrap"
         >
-          <div
-            onClick={() => (!session ? signIn() : signOut())}
-            className="header__link"
-          >
+          <div className="header__link" >
             <p>{session ? `Hello, ${session?.user?.name}` : "Sign In"}</p>
             <p className="font-extrabold md:text-sm">Account & List</p>
           </div>
